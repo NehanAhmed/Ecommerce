@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .parent{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 300px;
+            border: 1px solid black;
+            color: white;
+
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 60px;
+            background-color: purple;
+            align-items: center;
+        }
+        .top-left{
+            /* background-color: #fff; */
+            margin-left: 2%;
+            color: white;
+            font-weight: bold;
+        }
+        .top-right{
+            /* background: white; */
+            margin-right: 2%;
+            display: flex;
+            justify-content: space-around;
+            width: 10%;
+        }
+        .fa-brands{
+            color: white;
+            font-size: larger;
+        }
+        .center{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(78, 76, 76);
+            width: 100%;
+            height: 200px;
+            
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .center-flex-company{
+            /* background-color: yellow; */
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+        }
+        .center-flex-pro{
+            /* background-color: yellow; */
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .center-flex-use{
+            /* background-color: yellow; */
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .center-flex-contact{
+            /* background-color: yellow; */
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .bottom{
+            width: 100%;
+            height: 40px;
+            background-color: gray;
+            text-align: center;
+            /* align-items: center; */
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <!-- TOP DIV START -->
+        <div class="top">
+            <div class="top-left"><p>Get Connected with us on social networks</p></div>
+            <div class="top-right">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-google"></i>
+            </div>
+        </div>
+
+        <!-- CENTER DIV START -->
+        <div class="center">
+            <div class="center-flex-company">
+                <h1>Company Name</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, obcaecati voluptate reprehenderit molestiae consequatur vitae consequuntur reiciendis numquam illum, quos cum inventore corporis ipsa eveniet? Earum distinctio deserunt facilis blanditiis.</p>
+            </div>
+            <div class="center-flex-pro">
+                <h1>Products</h1>
+                <a href="">MDBootstrap</a>
+                <a href="">MDBootstrap</a>
+                <a href="">MDBootstrap</a>
+                <a href="">MDBootstrap</a>
+            </div>
+            <div class="center-flex-use"><h1>USEFUL LINKS</h1>
+            <a href="">Your Account</a>
+            <a href="">Your Account</a>
+            <a href="">Your Account</a>
+            <a href="">Your Account</a>
+            </div>
+            <div class="center-flex-contact"><h1>Contact</h1>
+            <p><i class="fa-brands fa-facebook-f"></i>Address</p>
+            <p>email</p>
+            <p>Number</p>
+            <p>Contact</p>
+            </div>
+        </div>
+
+        <!-- BOTTOM DIV START -->
+        <div class="bottom">
+            <p>&copy;2020 Copywrite: MDBootstrap.com</p>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/0a02fbb60a.js" crossorigin="anonymous"></script>
+</body>
+</html>
