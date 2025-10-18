@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-include __DIR__ . '/../admin/Include/db.php';
+include __DIR__ . '/../admin/include/db.php';
 ?>
 
 <?php 

@@ -1,8 +1,8 @@
 <?php
-session_start()
+session_start();
 ?>
 <?php
-include __DIR__ . '/../admin/Include/db.php';
+include __DIR__ . '/../admin/include/db.php';
 ?>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['cart'])) {

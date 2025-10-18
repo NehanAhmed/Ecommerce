@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "127.0.0.1"; // use TCP instead of unix socket to avoid socket path mismatch
 $username = "root";
 $password = "";
 $dbname = "ecommerce";

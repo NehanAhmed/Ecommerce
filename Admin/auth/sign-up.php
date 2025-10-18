@@ -1,4 +1,5 @@
 <?php
+// include DB connection (case-sensitive filesystem on Linux)
 include '../include/db.php';
 
 $error_message = '';

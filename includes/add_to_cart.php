@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-<?php include("../admin/Include/db.php"); ?>
+<?php include("../admin/include/db.php"); ?>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
