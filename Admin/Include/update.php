@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $id = mysqli_real_escape_string($conn, $_POST['id']);
         $productName = mysqli_real_escape_string($conn, $_POST['productName']);
         $description = mysqli_real_escape_string($conn, $_POST['description']);
+        $productPrice = mysqli_real_escape_string($conn, $_POST['productPrice']);
         $collection_id = mysqli_real_escape_string($conn, $_POST['collection_id']);
         $productImage = $_FILES['productImage']['name'];
 
@@ -47,7 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "UPDATE `products` SET 
                 `productName`='$productName',
                 `productImage`='$imageToUpdate',
-                `description`='$description', 
+                `description`='$description',
+                `productPrice`='$productPrice',
                 `collection_id`='$collection_id' 
                 WHERE `id` = '$id'";
 

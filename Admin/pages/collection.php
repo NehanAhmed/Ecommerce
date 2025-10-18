@@ -61,6 +61,22 @@ while ($row_collection = mysqli_fetch_assoc($res)) {
 </head>
 <body>
 <div class="parent p-5">
+  <?php if (isset($_GET['error']) && $_GET['error'] === 'has_products'): ?>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Cannot Delete!</strong> This collection contains products. Please delete them first.
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+<?php elseif (isset($_GET['success']) && $_GET['success'] === 'deleted'): ?>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    Collection deleted successfully.
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+<?php elseif (isset($_GET['error']) && $_GET['error'] === 'failed'): ?>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    Something went wrong while deleting. Try again.
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+<?php endif; ?>
   <div class="rounded bg-white shadow-sm">
     <div class="d-flex justify-content-between align-items-center border-bottom p-3">
       <h4 class="m-0">Collections Management</h4>

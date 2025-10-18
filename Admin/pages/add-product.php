@@ -8,6 +8,7 @@ $sql = "SELECT
     products.productImage,
     products.dt,
     products.description,
+    products.productPrice,
     products.collection_id,
     collection.name as collection_name
 FROM products
@@ -122,6 +123,10 @@ while ($row_product = mysqli_fetch_assoc($res)) {
                 <textarea class="form-control" name="product_description" rows="3" required></textarea>
               </div>
               <div class="mb-3">
+                <label class="form-label">Product Price</label>
+                <input type="text" class="form-control" name="product_price" required>
+              </div>
+              <div class="mb-3">
                 <label class="form-label">Collection</label>
                 <select class="form-select" name="collection_id" required>
                   <option value="" disabled selected>Select a collection</option>
@@ -154,6 +159,7 @@ while ($row_product = mysqli_fetch_assoc($res)) {
             <th style="width: 18%;">Product Name</th>
             <th style="width: 15%;">Image</th>
             <th style="width: 25%;">Description</th>
+            <th style="width: 12%;">Price</th>
             <th style="width: 12%;">Collection</th>
             <th style="width: 15%;">Date & Time</th>
             <th style="width: 15%;">Actions</th>
@@ -182,6 +188,12 @@ while ($row_product = mysqli_fetch_assoc($res)) {
                   <?= htmlspecialchars($row['description']) ?>
                 </div>
               </td>
+              <td>
+                <div class="product-description" title="<?= htmlspecialchars($row['productPrice']) ?>">
+                  <?= htmlspecialchars($row['productPrice']) ?>
+                </div>
+              </td>
+
               <td>
                 <span class="collection-badge"><?= htmlspecialchars($row['collection_name']) ?></span>
               </td>
@@ -229,6 +241,12 @@ while ($row_product = mysqli_fetch_assoc($res)) {
                       <div class="mb-3">
                         <label class="form-label">Product Description</label>
                         <textarea class="form-control" name="description" rows="3" required><?= htmlspecialchars($row['description']) ?></textarea>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label">Product Price</label>
+                        <input type="text" class="form-control" name="productPrice" 
+                               value="<?= htmlspecialchars($row['productPrice']) ?>" required>
                       </div>
 
                       <div class="mb-3">
